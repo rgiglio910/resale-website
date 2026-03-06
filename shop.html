@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f5f5f5;
+}
+header{
+  background:black;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+nav a{
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:40px;
+}
+.product{
+  background:white;
+  padding:15px;
+  border-radius:6px;
+  text-align:center;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+.product img{
+  width:100%;
+  border-radius:6px;
+}
+.buttons button{
+  background:black;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  margin:5px 2px;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Shop the Collection</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="about.html">About</a>
+<a href="platforms.html">Where to Buy</a>
+</nav>
+</header>
+
+<section class="products">
+
+<!-- Example Product Card -->
+<div class="product">
+  <img src="images/Gap-Wide-Sleeve-Ruffle-Jean-Jacket.jpeg" alt="Gap Wide Sleeve Ruffle Jean Jacket">
+  <h3>Gap Wide Sleeve Ruffle Jean Jacket</h3>
+  <p>$85</p>
+  <div class="buttons">
+    <a href="https://www.ebay.com/itm/206058286688"><button>Buy on eBay</button></a>
+    <a href="https://www.depop.com/products/rgiggs910-gap-denim-wide-sleeve-ruffle-8c3f/manage/"><button>View on Depop</button></a>
+    <a href="https://poshmark.com/listing/Gap-Denim-Wide-Sleeve-Ruffle-Denim-Jean-Jacket-Blue-Womens-Small-NWT-698916a821b801b272870496"><button>Buy on Poshmark</button></a>
+  </div>
+</div>
+
+<div class="product">
+  <img src="images/Juicy-Couture-P&G-Velour-Leather-Large-Tote-Bag.jpeg" alt="Juicy Couture P&G Velour Leather Large Tote Bag">
+  <h3>Juicy Couture P&G Velour Leather Large Tote Bag</h3>
+  <p>$240</p>
+  <div class="buttons">
+    <a href="https://www.ebay.com/itm/205844559426"><button>Buy on eBay</button></a>
+    <a href="https://www.depop.com/products/rgiggs910-juicy-couture-pam-gela-velour-b4c3/manage/"><button>View on Depop</button></a>
+    <a href="https://poshmark.com/listing/Juicy-Couture-Pam-Gela-Velour-Dark-Purple-and-Pink-Leather-Large-Tote-Bag-6914c2f1b14a06ec3fce7a9b"><button>Buy on Poshmark</button></a>
+  </div>
+</div>
+
+<div class="product">
+  <img src="images/L.L.-Bean-Traditional-Fit-Flannel-Shirt-XXL-Tall.jpeg" alt="L.L. Bean Flannel Shirt Men's XXL Tall">
+  <h3>L.L. Bean Flannel Shirt Men's XXL Tall</h3>
+  <p>$25</p>
+  <div class="buttons">
+    <a href="https://www.ebay.com/itm/205597944201"><button>Buy on eBay</button></a>
+    <a href="https://www.depop.com/products/rgiggs910-ll-bean-traditional-fit-flannel//"><button>View on Depop</button></a>
+    <a href="https://poshmark.com/listing/LL-Bean-Traditional-Fit-Flannel-Shirt-Mens-XXL-Tall-686553077ac62969ae995836"><button>Buy on Poshmark</button></a>
+  </div>
+</div>
+<!-- Add more featured items below using the same structure -->
+
+</section>
+</body>
+</html>

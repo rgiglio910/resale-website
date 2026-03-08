@@ -10,24 +10,43 @@ body{
   margin:0;
   background:#f5f5f5;
 }
+
+/* Header styles */
 header{
-  background:black;
-  color:white;
+  background:#2bc0c0; /* teal header */
+  color:black;
   padding:20px;
   text-align:center;
 }
+
 nav a{
-  color:white;
+  color:black;
   margin:0 15px;
   text-decoration:none;
   font-weight:bold;
 }
+
+/* Products section */
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  padding:40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns on desktop */
+  gap: 20px;
+  padding: 20px 40px 40px 40px; /* less top padding to reduce gray space */
 }
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual product cards */
 .product{
   background:white;
   padding:15px;
@@ -35,10 +54,13 @@ nav a{
   text-align:center;
   box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
+
 .product img{
   width:100%;
   border-radius:6px;
 }
+
+/* Buttons under each product */
 .buttons button{
   background:black;
   color:white;
@@ -47,22 +69,45 @@ nav a{
   margin:5px 2px;
   cursor:pointer;
 }
+
+/* Featured blurb */
+.featured-blurb{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#2bc0c0; /* teal footer */
+  color:black;
+  margin-top:40px;
+}
 </style>
 </head>
 <body>
+
 <header>
 <h1>Shop the Collection</h1>
 <nav>
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="about.html">About</a>
-<a href="platforms.html">Where to Buy</a>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="platforms.html">Where to Buy</a>
 </nav>
 </header>
 
+<!-- Featured blurb -->
+<div class="featured-blurb">
+<p>
+Here are some of the over 1,000 items currently listed for sale. Each product includes links to the listings on eBay, Depop, and Poshmark.
+</p>
+</div>
+
 <section class="products">
 
-<!-- Example Product Card -->
+<!-- Product Card 1 -->
 <div class="product">
   <img src="images/gap-wide-sleeve-ruffle-jean-jacket.jpeg" alt="Gap Wide Sleeve Ruffle Jean Jacket">
   <h3>Gap Wide Sleeve Ruffle Jean Jacket</h3>
@@ -74,6 +119,7 @@ nav a{
   </div>
 </div>
 
+<!-- Product Card 2 -->
 <div class="product">
   <img src="images/juicy-couture-pg-velour-leather-large-tote-bag.jpeg" alt="Juicy Couture P&G Velour Leather Large Tote Bag">
   <h3>Juicy Couture P&G Velour Leather Large Tote Bag</h3>
@@ -85,6 +131,7 @@ nav a{
   </div>
 </div>
 
+<!-- Product Card 3 -->
 <div class="product">
   <img src="images/ll-bean-traditional-fit-flannel-shirt-xxl-tall.jpeg" alt="L.L. Bean Flannel Shirt Men's XXL Tall">
   <h3>L.L. Bean Flannel Shirt Men's XXL Tall</h3>
@@ -95,8 +142,51 @@ nav a{
     <a href="https://poshmark.com/listing/LL-Bean-Traditional-Fit-Flannel-Shirt-Mens-XXL-Tall-686553077ac62969ae995836"><button>Buy on Poshmark</button></a>
   </div>
 </div>
-<!-- Add more featured items below using the same structure -->
+
+<div class="product">
+  <img src="images/forever-21-faux-suede-fur-vest.jpg" alt="Forever 21 Faux Black Suede and Ivory Fur Vest">
+  <h3>Forever 21 Faux Black Suede and Ivory Fur Vest Womens Medium</h3>
+  <p>$25</p>
+  <div class="buttons">
+    <a href="https://www.ebay.com/itm/205726104071"><button>Buy on eBay</button></a>
+    <a href="https://www.depop.com/products/rgiggs910-womens-leather-vest-with-fur/manage/"><button>View on Depop</button></a>
+    <a href="https://poshmark.com/listing/Forever-21-Womens-Medium-Faux-Black-Suede-and-Ivory-Fur-Vest-5de5c018afade871dfe41993"><button>Buy on Poshmark</button></a>
+  </div>
+</div>
+
+
+<div class="product">
+  <img src="images/show-me-your-mumu-barbie-hat-collab.jpeg" alt="Mumu x Barbie Daisy Flower Adjustable Cap">
+  <h3>Mumu x Barbie Daisy Adjustable Cap Barbicore Style by Show Me Your Mumu</h3>
+  <p>$30</p>
+  <div class="buttons">
+    <a href="https://www.ebay.com/itm/206120945635"><button>Buy on eBay</button></a>
+    <a href="https://www.depop.com/products/rgiggs910-mumu-x-barbie-daisy-adjustable/"><button>View on Depop</button></a>
+    <a href="https://poshmark.com/listing/Mumu-X-Barbie-Daisy-Adjustable-Cap-Barbicore-Style-by-Show-Me-Your-Mumu-648ca4c38e40fd1a2646f1af"><button>Buy on Poshmark</button></a>
+  </div>
+</div>
+
+<div class="product">
+  <img src="images/juicy-couture-pam-gela-burgundy-cynthia-purse.jpeg" alt="Juicy Couture Pam & Gela Cynthia Patent Leather Burgundy Purse NWT">
+  <h3>Juicy Couture Pam & Gela Cynthia Patent Leather Burgundy Purse NWT</h3>
+  <p>$25</p>
+  <div class="buttons">
+    <a href="https://www.ebay.com/itm/204486426031"><button>Buy on eBay</button></a>
+    <a href="https://www.depop.com/products/rgiggs910-retro-juicy-couture-dark-red/manage/"><button>View on Depop</button></a>
+    <a href="https://poshmark.com/listing/Juicy-Couture-Pam-Gela-Cynthia-Patent-Leather-Long-Chain-Burgundy-Purse-NWT-651e06eb24237aee87ec99b5"><button>Buy on Poshmark</button></a>
+  </div>
+</div>
 
 </section>
+
+<footer>
+<p>Shop my stores:</p>
+<p>
+<a href="https://www.ebay.com/str/giggsstore">eBay</a> |
+<a href="https://www.depop.com/rgiggs910/">Depop</a> |
+<a href="https://poshmark.com/closet/rgiggs910">Poshmark</a>
+</p>
+</footer>
+
 </body>
 </html>
